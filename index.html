@@ -73,10 +73,31 @@
             const grid = document.getElementById('project-grid');
             CONFIG.projects.forEach((item, index) => {
                 const card = document.createElement('div');
-                card.className = 'glass-card overflow-hidden cursor-pointer group animate-fade-in flex flex-col';
+                card.className = 'glass-card overflow-hidden cursor-pointer group animate-fade-in flex flex-col relative';
                 card.style.animationDelay = (index * 0.1) + "s";
                 card.onclick = () => openDetail(index);
                 
+                // Calculate Media Stats
+                let imgCount = 0;
+                let vidCount = 0;
+                if(item.media && Array.isArray(item.media)) {
+                    item.media.forEach(m => {
+                        if(m.type === 'video') vidCount++;
+                        else imgCount++;
+                    });
+                } else if(item.src) {
+                    if(item.type === 'video') vidCount = 1; else imgCount = 1;
+                }
+
+                let badgeHtml = '';
+                if(vidCount > 0 || imgCount > 1) {
+                    badgeHtml = `<div class="media-badge">`;
+                    if(imgCount > 0) badgeHtml += `<span>${imgCount} 图</span>`;
+                    if(imgCount > 0 && vidCount > 0) badgeHtml += `<span class="opacity-30">·</span>`;
+                    if(vidCount > 0) badgeHtml += `<span>${vidCount} 视</span>`;
+                    badgeHtml += `</div>`;
+                }
+
                 let tagsHtml = '';
                 if(item.tags && item.tags.length > 0) {
                     tagsHtml = `<div class="flex flex-wrap gap-2 mt-4">` + 
@@ -87,6 +108,7 @@
                 card.innerHTML = `
                     <div class="h-60 w-full overflow-hidden relative">
                         <img src="${item.cover}" class="w-full h-full object-cover grayscale-[0.3] transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105">
+                        ${badgeHtml}
                     </div>
                     <div class="p-8 flex-1 flex flex-col">
                         <h3 class="text-base font-black text-black tracking-tight mb-2 uppercase">${item.title}</h3>
@@ -140,7 +162,11 @@
             let mediaHtml = '';
             mediaList.forEach(m => {
                 if (m.type === 'video') {
-                    mediaHtml += `<video src="${m.src}" controls class="w-full rounded-xl mb-6 shadow-sm"></video>`;
+                    mediaHtml += `
+                        <div class="video-wrapper relative rounded-xl mb-6 shadow-sm">
+                            <div class="loading-spinner absolute z-10"></div>
+                            <video src="${m.src}" controls class="w-full opacity-0 transition-opacity duration-700 relative z-20" oncanplay="this.classList.remove('opacity-0'); this.parentElement.querySelector('.loading-spinner').remove();"></video>
+                        </div>`;
                 } else {
                     mediaHtml += `<img src="${m.src}" class="w-full h-auto rounded-xl mb-6 shadow-sm cursor-zoom-in" onclick="openLightbox('${m.src}')" loading="lazy">`;
                 }

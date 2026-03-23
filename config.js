@@ -19,25 +19,40 @@ const CONFIG = {
     {
       title: "文献Agent助手",
       type: "image",
-      cover: "./ai/1.jpg",
+      cover: "https://free.picui.cn/free/2026/03/23/69c111bf0ca0c.jpg",
       src: "",
       tags: ["Agent", "AI", "Tools", "React"],
       media: [
-        { type: "image", src: "./ai/1.jpg" },
-        { type: "image", src: "./ai/2.jpg" },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111bf0ca0c.jpg",
+        },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111bfe331b.jpg",
+        },
       ],
       description: "知网文献查找助手，可以通过自然语言对话实现知网文献查找。",
     },
     {
       title: "网盘解析",
       type: "image",
-      cover: "./ai/4.png",
+      cover: "https://free.picui.cn/free/2026/03/23/69c111bfca4f7.png",
       src: "",
       tags: ["Python", "套壳", "逆向分析", "React"],
       media: [
-        { type: "image", src: "./ai/4.png" },
-        { type: "image", src: "./ai/3.jpg" },
-        { type: "image", src: "./ai/16.png" },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111bfca4f7.png",
+        },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111bf2f789.jpg",
+        },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111c3d9b2b.png",
+        },
         { type: "video", src: "./ai/5.mp4" },
       ],
       description:
@@ -46,12 +61,18 @@ const CONFIG = {
     {
       title: "Python抢票脚本(演唱会)",
       type: "image",
-      cover: "./ai/7.jpg",
+      cover: "https://free.picui.cn/free/2026/03/23/69c111c0eab0b.jpg",
       src: "",
       tags: ["Python", "自动化", "脚本"],
       media: [
-        { type: "image", src: "./ai/7.jpg" },
-        { type: "image", src: "./ai/6.jpg" },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111c0eab0b.jpg",
+        },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111becdef7.jpg",
+        },
         { type: "video", src: "./ai/8.mp4" },
       ],
       description:
@@ -60,13 +81,22 @@ const CONFIG = {
     {
       title: "微信小程序（AI推荐服务）",
       type: "image",
-      cover: "./ai/9.jpg",
+      cover: "https://free.picui.cn/free/2026/03/23/69c111c13a42f.jpg",
       src: "",
       tags: ["AI", "Spring Boot", "微信小程序", "全栈"],
       media: [
-        { type: "image", src: "./ai/9.jpg" },
-        { type: "image", src: "./ai/10.jpg" },
-        { type: "image", src: "./ai/11.jpg" },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111c13a42f.jpg",
+        },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111c152b32.jpg",
+        },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111c201de6.jpg",
+        },
       ],
       description:
         "后端采用 Spring Boot 构建服务接口，前端使用微信小程序提供丝滑的用户体验，包含服务展示、在线预约等核心业务闭环，含管理端。",
@@ -74,25 +104,40 @@ const CONFIG = {
     {
       title: "系统通知监听App",
       type: "image",
-      cover: "./ai/14.jpg",
+      cover: "https://free.picui.cn/free/2026/03/23/69c111c3c030d.jpg",
       src: "",
       tags: ["Kotlin", "APP"],
       media: [
-        { type: "image", src: "./ai/14.jpg" },
-        { type: "image", src: "./ai/15.jpg" },
-        { type: "image", src: "./ai/16.jpg" },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111c364a6b.jpg",
+        },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111c37628c.jpg",
+        },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111c3c030d.jpg",
+        },
       ],
       description: "一款通过监听安卓系统消息通知实现某些自动化需求的APP",
     },
     {
       title: "局域网互传助手",
       type: "image",
-      cover: "./ai/12.png",
+      cover: "https://free.picui.cn/free/2026/03/23/69c111c19b7ea.png",
       src: "",
       tags: ["P2P", "文件助手", "前端"],
       media: [
-        { type: "image", src: "./ai/12.png" },
-        { type: "image", src: "./ai/13.jpg" },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111c19b7ea.png",
+        },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111c316e53.jpg",
+        },
       ],
       description: "一个支持多文件同时向多人发送的局域网互传程序",
     },
