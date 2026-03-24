@@ -97,6 +97,18 @@ const CONFIG = {
           type: "image",
           src: "https://free.picui.cn/free/2026/03/23/69c111c201de6.jpg",
         },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/23/69c111c201de6.jpg",
+        },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/24/69c1e37a8a362.jpeg",
+        },
+        {
+          type: "image",
+          src: "https://free.picui.cn/free/2026/03/24/69c1e37ac8dec.jpeg",
+        },
       ],
       description:
         "后端采用 Spring Boot 构建服务接口，前端使用微信小程序提供丝滑的用户体验，包含服务展示、在线预约等核心业务闭环，含管理端。",
